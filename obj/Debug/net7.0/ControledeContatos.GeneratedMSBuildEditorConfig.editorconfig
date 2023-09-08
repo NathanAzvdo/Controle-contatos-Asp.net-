@@ -1,0 +1,57 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ControledeContatos
+build_property.RootNamespace = ControledeContatos
+build_property.ProjectDir = /home/nathan/Documentos/ControledeContatos/
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/nathan/Documentos/ControledeContatos
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/nathan/Documentos/ControledeContatos/Views/Contato/apagar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGF0by9hcGFnYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nathan/Documentos/ControledeContatos/Views/Contato/criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGF0by9jcmlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nathan/Documentos/ControledeContatos/Views/Contato/editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGF0by9lZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nathan/Documentos/ControledeContatos/Views/Contato/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGF0by9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nathan/Documentos/ControledeContatos/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nathan/Documentos/ControledeContatos/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nathan/Documentos/ControledeContatos/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nathan/Documentos/ControledeContatos/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nathan/Documentos/ControledeContatos/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nathan/Documentos/ControledeContatos/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5w41c6nrsf
