@@ -1,6 +1,16 @@
+using ControledeContatos.data;
+using Microsoft.EntityFrameworkCore;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection") ?? "Default Connection is not defined.";
+    
+    builder.Services.AddDbContextPool<bancoContext>(options => 
+        options.UseMySql(mySqlConnection,
+        new MySqlServerVersion(new Version(8, 0, 0))));
+ 
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

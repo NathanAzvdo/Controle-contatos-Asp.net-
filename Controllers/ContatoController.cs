@@ -20,9 +20,10 @@ namespace ControledeContatos.Controllers
         {
             return View();
         }
-        public IActionResult apagar()
+        public IActionResult apagarConf()
         {
             return View();
         }
+        
     }
 }

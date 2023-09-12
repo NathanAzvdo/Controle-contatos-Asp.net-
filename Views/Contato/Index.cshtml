@@ -2,13 +2,13 @@
     ViewData["Title"] = "Listagem de contatos";
 }
 <div class="text-center">
-<h1>Listagem de contatos cadastrados!</h1>
+<h1 class="display-4">Listagem de contatos</h1>
 <br><br>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome</th>
+      <th scope="col"></th>
+      <th scope="col">Nome Completo</th>
       <th scope="col">Email</th>
       <th scope="col">Celular</th>
       <th scope="col"><a asp-controller="Contato" asp-action="criar"><button type="button" class="btn btn-success">Criar novo contato</button></a></th>
@@ -22,8 +22,8 @@
       <td>mdo</td>
       <td>
         <div class="d-grid gap-2 d-md-block">
-            <button class="btn btn-primary" type="button">Editar</button>
-            <button class="btn btn-danger" type="button">Apagar</button>
+            <a role="button" asp-controller="Contato" asp-action="editar" class="btn btn-primary" type="button">Editar</a>
+            <a role="button" asp-controller="Contato" asp-action="apagarConf" class="btn btn-danger" type="button">Apagar</a>     
         </div>
       </td>
     </tr>
@@ -34,8 +34,8 @@
       <td>fat</td>
       <td>
         <div class="d-grid gap-2 d-md-block">
-            <button class="btn btn-primary" type="button">Editar</button>
-            <button class="btn btn-danger" type="button">Apagar</button>
+            <a role="button" asp-controller="Contato" asp-action="editar" class="btn btn-primary" type="button">Editar</a>
+            <a role="button" asp-controller="Contato" asp-action="apagarConf" class="btn btn-danger" type="button">Apagar</a>     
         </div>
       </td>
     </tr>
@@ -46,8 +46,9 @@
       <td>twitter</td>
       <td>
         <div class="d-grid gap-2 d-md-block">
-            <button class="btn btn-primary" type="button">Editar</button>
-            <button class="btn btn-danger" type="button">Apagar</button>
+            <a role="button" asp-controller="Contato" asp-action="editar" class="btn btn-primary" type="button">Editar</a>
+            <a role="button" asp-controller="Contato" asp-action="apagarConf" class="btn btn-danger" type="button">Apagar</a>     
+            
         </div>
       </td>
 
