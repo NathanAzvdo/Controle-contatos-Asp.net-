@@ -1,4 +1,6 @@
 using ControledeContatos.data;
+using ControledeContatos.Repositorio;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -10,6 +12,7 @@ string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConne
     builder.Services.AddDbContextPool<bancoContext>(options => 
         options.UseMySql(mySqlConnection,
         new MySqlServerVersion(new Version(8, 0, 0))));
+    builder.Services.AddScoped<icontatoRepositorio, contatoRepositorio>();
  
 builder.Services.AddControllersWithViews();
 

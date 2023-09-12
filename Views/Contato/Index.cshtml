@@ -1,58 +1,42 @@
+@model List<ContatoModel>
 @{
-    ViewData["Title"] = "Listagem de contatos";
+  ViewData["Title"] = "Listagem de contatos";
 }
 <div class="text-center">
-<h1 class="display-4">Listagem de contatos</h1>
-<br><br>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Nome Completo</th>
-      <th scope="col">Email</th>
-      <th scope="col">Celular</th>
-      <th scope="col"><a asp-controller="Contato" asp-action="criar"><button type="button" class="btn btn-success">Criar novo contato</button></a></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>mdo</td>
-      <td>
-        <div class="d-grid gap-2 d-md-block">
-            <a role="button" asp-controller="Contato" asp-action="editar" class="btn btn-primary" type="button">Editar</a>
-            <a role="button" asp-controller="Contato" asp-action="apagarConf" class="btn btn-danger" type="button">Apagar</a>     
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>fat</td>
-      <td>
-        <div class="d-grid gap-2 d-md-block">
-            <a role="button" asp-controller="Contato" asp-action="editar" class="btn btn-primary" type="button">Editar</a>
-            <a role="button" asp-controller="Contato" asp-action="apagarConf" class="btn btn-danger" type="button">Apagar</a>     
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-      <td>kjkjkjkjkj</td>
-      <td>twitter</td>
-      <td>
-        <div class="d-grid gap-2 d-md-block">
-            <a role="button" asp-controller="Contato" asp-action="editar" class="btn btn-primary" type="button">Editar</a>
-            <a role="button" asp-controller="Contato" asp-action="apagarConf" class="btn btn-danger" type="button">Apagar</a>     
-            
-        </div>
-      </td>
-
-    </tr>
-  </tbody>
-</table>
+  <h1 class="display-4">Listagem de contatos</h1>
+  <br><br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Nome Completo</th>
+        <th scope="col">Email</th>
+        <th scope="col">Celular</th>
+        <th scope="col"><a asp-controller="Contato" asp-action="criar"><button type="button"
+              class="btn btn-success">Criar novo contato</button></a></th>
+      </tr>
+    </thead>
+    <tbody>
+      @if (Model != null && Model.Any())
+      {
+        foreach (ContatoModel contato in Model)
+        {
+          <tr>
+            <th scope="row">@contato.Id</th>
+            <td>@contato.Nome</td>
+            <td>@contato.Email</td>
+            <td>@contato.celular</td>
+            <td>
+              <div class="d-grid gap-2 d-md-block">
+                <a role="button" asp-controller="Contato" asp-route-id="@contato.Id" asp-action="editar" class="btn btn-primary"
+                  type="button">Editar</a>
+                <a role="button" asp-controller="Contato" asp-route-id="@contato.Id" asp-action="apagarConf" class="btn btn-danger"
+                  type="button">Apagar</a>
+              </div>
+            </td>
+          </tr>
+        }
+      }
+    </tbody>
+  </table>
 </div>
