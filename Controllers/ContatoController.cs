@@ -1,11 +1,6 @@
 using ControledeContatos.Models;
 using ControledeContatos.Repositorio;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ZstdSharp.Unsafe;
 
 namespace ControledeContatos.Controllers
 {
@@ -24,17 +19,28 @@ namespace ControledeContatos.Controllers
         {
             return View();
         }
-        public IActionResult editar()
+        public IActionResult editar(int id)
         {
-            return View();
+            ContatoModel ctt = _contatoRepositorio.BuscarId(id);
+            return View(ctt);
         }
-        public IActionResult apagarConf()
+        public IActionResult apagarConf(int id)
         {
-            return View();
+            ContatoModel ctt = _contatoRepositorio.BuscarId(id);
+            return View(ctt);
+        }
+        public IActionResult Apagar(int id){
+            _contatoRepositorio.apagar(id);
+            return RedirectToAction("Index");
         }
         [HttpPost]
         public IActionResult criar(ContatoModel contato){
             _contatoRepositorio.adicionar(contato);
+            return RedirectToAction("index");
+        }       
+        [HttpPost]
+        public IActionResult alterar(ContatoModel contato){
+            _contatoRepositorio.atualizar(contato);
             return RedirectToAction("index");
         }
         

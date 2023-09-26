@@ -12,7 +12,7 @@ string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConne
     builder.Services.AddDbContextPool<bancoContext>(options => 
         options.UseMySql(mySqlConnection,
         new MySqlServerVersion(new Version(8, 0, 0))));
-    builder.Services.AddScoped<icontatoRepositorio, contatoRepositorio>();
+    builder.Services.AddScoped<icontatoRepositorio, ContatoRepositorio>();
  
 builder.Services.AddControllersWithViews();
 

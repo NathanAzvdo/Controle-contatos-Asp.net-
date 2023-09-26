@@ -1,3 +1,4 @@
+@model ContatoModel
 @{
     ViewData["Title"] = "Apagar contato";
 }
@@ -5,18 +6,18 @@
     <br>
     <h1 class="display-4">Realmente deseja apagar?</h1>
     <br>
-    <div class="card" style="width: 18rem; margin: 2vh auto 6vh;">
+    <div class="card" style="width: 35rem; margin: 2vh auto 6vh;">
     <div class="card-header">
         Contato
     </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Nome: </li>
-        <li class="list-group-item">Celular: </li>
-        <li class="list-group-item">Email: </li>
+    <ul class="list-group list-group-flush" style="text-align:left;">
+        <li class="list-group-item"><b>Nome:</b> @Model.Nome</li>
+        <li class="list-group-item"><b>Celular:</b> @Model.celular</li>
+        <li class="list-group-item"><b>Email:</b> @Model.Email</li>
     </ul>
     </div>
     <div class="d-grid gap-2" style="width: 15rem; margin:0 auto;">
-        <a role="button" class="btn btn-danger" asp-controller="Contato" asp-action="apagar">Apagar</a>
+        <a role="button" class="btn btn-danger" asp-controller="Contato" asp-route-id="@Model.Id" asp-action="apagar">Apagar</a>
         <a role="button" class="btn btn-primary" asp-controller="Contato" asp-action="Index">Cancelar exclusão</a>
     </div>
 </div>
