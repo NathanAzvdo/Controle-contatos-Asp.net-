@@ -1,6 +1,7 @@
 using ControledeContatos.Models;
 using ControledeContatos.Repositorio;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace ControledeContatos.Controllers
 {
@@ -35,8 +36,14 @@ namespace ControledeContatos.Controllers
         }
         [HttpPost]
         public IActionResult criar(ContatoModel contato){
-            _contatoRepositorio.adicionar(contato);
-            return RedirectToAction("index");
+            if(ModelState.IsValid){
+                _contatoRepositorio.adicionar(contato);
+                return RedirectToAction("index");
+            }
+            else{
+                return View(contato);
+            }
+            
         }       
         [HttpPost]
         public IActionResult alterar(ContatoModel contato){

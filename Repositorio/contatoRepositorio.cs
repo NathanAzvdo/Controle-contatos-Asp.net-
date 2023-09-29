@@ -1,9 +1,6 @@
 using ControledeContatos.data;
 using ControledeContatos.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using ControledeContatos.Repositorio;
+
 
 namespace ControledeContatos.Repositorio
 {
